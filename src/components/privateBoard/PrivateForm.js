@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import * as actions from "../../actions";
 
 class PrivateForm extends Component {
   state = {
@@ -35,4 +37,7 @@ class PrivateForm extends Component {
   }
 }
 
-export default PrivateForm;
+export default connect(
+  null,
+  actions
+)(PrivateForm);

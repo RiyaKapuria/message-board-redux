@@ -8,9 +8,11 @@ import Navbar from "./Navbar";
 import PublicBoard from "./publicBoard/PublicBoard";
 import PrivateMessage from "./privateBoard/PrivateBoard";
 import { postReducer } from "../reducers/post_reducer";
+import { messageReducer } from "../reducers/message_reducer";
 
 const rootReducer = combineReducers({
-  posts: postReducer
+  posts: postReducer,
+  messages: messageReducer
 });
 const store = createStore(rootReducer);
 
