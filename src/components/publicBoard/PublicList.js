@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import * as actions from "../../actions";
 
 class PostList extends React.Component {
   handleDelete = post => {
@@ -41,4 +42,7 @@ const mapStateToProps = state => {
   return { posts: state.posts };
 };
 
-export default connect(mapStateToProps)(PostList);
+export default connect(
+  mapStateToProps,
+  actions
+)(PostList);
