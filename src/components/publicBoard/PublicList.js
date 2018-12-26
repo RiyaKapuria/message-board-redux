@@ -11,18 +11,29 @@ class PostList extends React.Component {
     if (!this.props.posts.length > 0) {
       return "no items found";
     }
-
     return (
       <ul className="list-group">
-        {this.props.posts.map(post => {
+        {this.props.posts.map((post, key) => {
           return (
-            <div key={post} className="card mt-1">
+            <div key={key} className="card mt-1">
               <div className="card-body">
-                <span className="ml-2" role="img" aria-label="">
-                  👍
-                </span>
-                <span className="mr-4 upvotes">1</span>
-                {post}
+                {!post.userId ? (
+                  <span className="ml-2" role="img" aria-label="">
+                    👍 {post}
+                  </span>
+                ) : (
+                  <div>
+                    <span className="mr-4 upvotes">
+                      <b>UserID:</b> {post.userId}
+                    </span>
+                    <span className="mr-4 upvotes">
+                      <b>Title:</b> {post.title}
+                    </span>
+                    <span className="mr-4 upvotes">
+                      <b>Body:</b> {post.body}
+                    </span>
+                  </div>
+                )}
                 <span
                   onClick={this.handleDelete.bind(this, post)}
                   className="float-right"

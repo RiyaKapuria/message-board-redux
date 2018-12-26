@@ -32,6 +32,9 @@ class PublicForm extends Component {
         <button onClick={this.handleSubmit} className="btn btn-primary">
           Post
         </button>
+        <button onClick={this.props.fetchPost} className="btn btn-success">
+          get post
+        </button>
       </div>
     );
   }
