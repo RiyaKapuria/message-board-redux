@@ -15,11 +15,12 @@ class PostList extends React.Component {
       <ul className="list-group">
         {this.props.posts.map((post, key) => {
           return (
-            <div key={key} className="card mt-1">
+            <div key={key} id="initialData" className="card mt-1">
+              {console.log(post)}
               <div className="card-body">
                 {!post.userId ? (
                   <span className="ml-2" role="img" aria-label="">
-                    👍 {post}
+                    👍 {post.id} {post.title}
                   </span>
                 ) : (
                   <div>

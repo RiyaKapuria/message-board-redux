@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should check snapshot for PublicForm 1`] = `
+<div>
+  <textarea
+    className="form-control"
+    onChange={[Function]}
+    value=""
+  />
+  <button
+    className="btn btn-primary"
+    onClick={[Function]}
+  >
+    Post
+  </button>
+  <button
+    className="btn btn-success"
+    onClick={[Function]}
+  >
+    get post
+  </button>
+</div>
+`;

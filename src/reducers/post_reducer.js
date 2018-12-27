@@ -1,7 +1,11 @@
 export const postReducer = (state = [], action) => {
   switch (action.type) {
     case "ADD_POST":
-      return [...state, action.post];
+      const post = {
+        id: action.post.id,
+        title: action.post.title
+      };
+      return [...state, post];
     case "DELETE_POST":
       let updatedArray = state.filter(m => m !== action.post);
       return [...updatedArray];

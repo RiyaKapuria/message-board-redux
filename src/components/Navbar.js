@@ -32,6 +32,11 @@ class Navbar extends React.Component {
                   Private Message
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/fetch">
+                  Fetch
+                </Link>
+              </li>
             </ul>
           </div>
         </nav>

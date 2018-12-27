@@ -1,7 +1,10 @@
 import axios from "axios";
 
 export const addPost = post => {
-  return { type: "ADD_POST", post };
+  return {
+    type: "ADD_POST",
+    post: { id: 20, title: post }
+  };
 };
 
 export const addMessage = message => {
